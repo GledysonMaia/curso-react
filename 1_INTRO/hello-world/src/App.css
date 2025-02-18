@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.App input#itxt {
+  background-color: black;
+  color: white;
+}
+
+.App p {
+  color: blue;
+}
