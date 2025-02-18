@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>Eu vou sofrer da maldição</h1>
+      <h2>Emmet funcionou</h2>
     </div>
   );
 }
