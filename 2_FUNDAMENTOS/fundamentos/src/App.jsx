@@ -3,7 +3,7 @@ Como importar componentes
 
 O componente que foi criado naquela pasta precisa ser importado
 para ser usado aqui na aplicação, para isso a sintaxe usada é
-import [componente] from '[caminho do componente].jsx'
+import [componente] from '[caminho do componente]'
 */
 // components
 import { useState } from 'react'
@@ -24,11 +24,11 @@ function App() {
     <>
       <h1>Fundamentos React</h1>
       <FirstComponent/>
+      {/*Para aplicar no site o que tem dentro do componente, 
+      escrevemos o seu nome em forma de tag, como está escrito no 
+      elemento acima.*/}
     </>
   )
 }
-/*
-Para aplicar no site o que tem dentro do componente, escrevemos o
-seu nome em forma de tag, como está escrito no código acima.
-*/
+
 export default App
