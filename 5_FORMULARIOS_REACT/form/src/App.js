@@ -6,7 +6,14 @@ function App() {
     <div className="App">
       <h2>Forms</h2>
       {/* 1 - criação de forms */}
-      <MyForm />
+      <MyForm
+        user={{
+          name: "João",
+          email: "joao@gmail.com",
+          bio: "Sou um advogado",
+          role: "admin",
+        }}
+      />
     </div>
   );
 }

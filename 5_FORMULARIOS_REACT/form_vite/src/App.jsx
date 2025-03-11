@@ -9,7 +9,14 @@ function App() {
     <>
       <h2>Forms</h2>
       {/* 1 - criação de forms */}
-      <MyForm />
+      <MyForm
+        user={{
+          name: "Josias",
+          email: "josias@gmail.com",
+          bio: "Sou um advogado",
+          role: "admin",
+        }}
+      />
     </>
   );
 }
