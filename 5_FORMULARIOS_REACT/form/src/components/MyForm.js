@@ -9,17 +9,18 @@ const MyForm = ({ user }) => {
 
   const [bio, setBio] = useState(user ? user.bio : "");
   const [role, setRole] = useState(user ? user.role : "");
+
   const handleName = (e) => setName(e.target.value);
 
   console.log(name);
   console.log(email);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log("Enviando o formulário");
     console.log(name, email, bio, role);
 
-    // 7 - limpar form
+    // 7  - limpar form
     setEmail("");
     setName("");
     setBio("");
@@ -28,6 +29,7 @@ const MyForm = ({ user }) => {
 
   return (
     <div>
+      {/* 5 - envio de form */}
       {/* 1 - criação de forms */}
       <form onSubmit={handleSubmit}>
         <div>
@@ -52,12 +54,12 @@ const MyForm = ({ user }) => {
             value={email}
           />
         </label>
-        <input type="submit" value="Enviar" />
-        {/* 8 = textarea */}
-        <label>
-          <span>Bio:</span>
+        {/* 8 - textarea */}
+        <label htmlFor="">
+          <span>Bio: </span>
           <textarea
             name="bio"
+            id=""
             placeholder="Descrição do usuário"
             onChange={(e) => setBio(e.target.value)}
             value={bio}
@@ -76,6 +78,7 @@ const MyForm = ({ user }) => {
             <option value="admin">Administrador</option>
           </select>
         </label>
+        <input type="submit" value="Enviar" />
       </form>
     </div>
   );
