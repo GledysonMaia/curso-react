@@ -12,7 +12,7 @@ const GameOver = ({
   score,
 }) => {
   const [letter, setLetter] = useState("");
-  const letterInputRef = useRef(null)
+  const letterInputRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ const GameOver = ({
 
     setLetter("");
 
-    letterInputRef.current.focus()
+    letterInputRef.current.focus();
   };
   return (
     <div className="game">
