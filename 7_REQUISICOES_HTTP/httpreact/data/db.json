@@ -24,6 +24,56 @@
       "id": "0cac",
       "name": "super mario bros",
       "price": "34"
+    },
+    {
+      "id": "4bc4",
+      "name": "teste",
+      "price": "24"
+    },
+    {
+      "id": "ecf7",
+      "name": "capa de chuva",
+      "price": "50.50"
+    },
+    {
+      "id": "973b",
+      "name": "teclado",
+      "price": "110"
+    },
+    {
+      "id": "3b2e",
+      "name": "mouse",
+      "price": "60"
+    },
+    {
+      "id": "c20d",
+      "name": "Suporte de monitor",
+      "price": "112"
+    },
+    {
+      "id": "a5fa",
+      "name": "Computador",
+      "price": "2500"
+    },
+    {
+      "id": "09f1",
+      "name": "Mesa",
+      "price": "249"
+    },
+    {
+      "id": "d083",
+      "name": "cadeira gamer",
+      "price": "2344"
+    },
+    {
+      "id": "4f6c",
+      "name": "cadeira gamer rgb",
+      "price": "3445"
+    },
+    {
+      "id": "84c6",
+      "name": "cabo hdmi",
+      "price": "12"
     }
   ]
 }
