@@ -74,6 +74,41 @@
       "id": "84c6",
       "name": "cabo hdmi",
       "price": "12"
+    },
+    {
+      "id": "7f76",
+      "name": "caixa de som",
+      "price": "120"
+    },
+    {
+      "id": "940d",
+      "name": "Helicóptero",
+      "price": "1000000"
+    },
+    {
+      "id": "28bc",
+      "name": "fogão electrolux",
+      "price": "500"
+    },
+    {
+      "id": "3455",
+      "name": "mesa gamer",
+      "price": "23"
+    },
+    {
+      "id": "976c",
+      "name": "led rgb",
+      "price": "45"
+    },
+    {
+      "id": "9592",
+      "name": "microfone",
+      "price": "68"
+    },
+    {
+      "id": "4ada",
+      "name": "doom",
+      "price": "12"
     }
   ]
 }
