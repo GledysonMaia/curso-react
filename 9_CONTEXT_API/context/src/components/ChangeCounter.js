@@ -1,17 +1,16 @@
-import React from "react";
-
+// 3 - alterando contexto
 import { useContext } from "react";
 import { CounterContext } from "../context/CounterContext";
 
-const Info = () => {
+const ChangeCounter = () => {
   const { counter, setCounter } = useContext(CounterContext);
-
   return (
     <div>
-      <h1>Info</h1>
-      <p>Valor do contador: {counter}</p>
+      <button onClick={() => setCounter(counter + 1)}>
+        Add value to counter
+      </button>
     </div>
   );
 };
 
-export default Info;
+export default ChangeCounter;
