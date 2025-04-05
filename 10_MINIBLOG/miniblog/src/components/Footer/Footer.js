@@ -1,12 +1,12 @@
 // CSS
-import styles from './Footer.module.css'
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div>
+    <footer className={styles.footer}>
       <h3>Escreva sobre o que você tem interesse!</h3>
       <p>Mini blog &copy; 2025</p>
-    </div>
+    </footer>
   );
 };
 

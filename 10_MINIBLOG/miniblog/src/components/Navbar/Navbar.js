@@ -3,16 +3,16 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav>
-      <NavLink to="/">
+    <nav className={styles.navbar}>
+      <NavLink to="/" className={styles.brand}>
         Mini <span>blog</span>
       </NavLink>
-      <ul>
+      <ul className={styles.links_list}>
         <li>
-          <NavLink to="/">Início</NavLink>
+          <NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}>Início</NavLink>
         </li>
         <li>
-          <NavLink to="/about">Sobre</NavLink>
+          <NavLink to="/about" className={({isActive}) => (isActive ? styles.active : "")}>Sobre</NavLink>
         </li>
       </ul>
     </nav>
