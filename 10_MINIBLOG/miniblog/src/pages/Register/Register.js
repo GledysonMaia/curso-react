@@ -90,9 +90,9 @@ const Register = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </label>
-        {!loading && <input type="submit" value="Cadastrar" className="btn" />}
-        {loading && <input type="submit" value="Aguarde..." className="btn" disabled/>}
-        {error && <p className="error">{error}</p>}
+          {!loading && <input type="submit" value="Cadastrar" className="btn" />}
+          {loading && <input type="submit" value="Aguarde..." className="btn" disabled/>}
+          {error && <p className="error">{error}</p>}
       </form>
     </div>
   );
