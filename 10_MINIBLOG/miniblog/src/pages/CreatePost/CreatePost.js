@@ -3,6 +3,7 @@ import styles from "./CreatePost.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthValue } from "../../context/AuthContext";
+import { useInsertDocument } from "../../hooks/useInsertDocument";
 const CreatePost = () => {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
@@ -10,8 +11,45 @@ const CreatePost = () => {
   const [tags, setTags] = useState([]);
   const [formError, setFormError] = useState("");
 
+  const { user } = useAuthValue();
+
+  const { insertDocument, response } = useInsertDocument("posts");
+
+  const navigate = useNavigate()
+
   const handleSumbit = (e) => {
     e.preventDefault();
+    setFormError("");
+
+    // validate image URL
+    try {
+      new URL(image);
+    } catch (error) {
+      setFormError("A imagem precisa ser uma URL.");
+    }
+
+    // create tags array
+    const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
+
+    // check all values
+    if (!title || !image || !tags || !body) {
+      setFormError("Por favor, preencha todos os campos.");
+    }
+
+    if (formError) return;
+
+    insertDocument({
+      title,
+      image,
+      body,
+      tags,
+      uid: user.uid,
+      createdBy: user.displayName,
+    });
+
+    // redirect to home page
+    navigate("/")
+
   };
 
   return (
@@ -64,10 +102,14 @@ const CreatePost = () => {
             value={tags}
           />
         </label>
-        <input type="submit" value="Cadastrar" className="btn" />
-        {/*{!loading && <input type="submit" value="Cadastrar" className="btn" />}
-        {loading && <input type="submit" value="Aguarde..." className="btn" disabled/>}
-        {error && <p className="error">{error}</p>}*/}
+        {!response.loading && (
+          <input type="submit" value="Cadastrar" className="btn" />
+        )}
+        {response.loading && (
+          <input type="submit" value="Aguarde..." className="btn" disabled />
+        )}
+        {response.error && <p className="error">{response.error}</p>}
+        {formError && <p className="error">{formError}</p>}
       </form>
     </div>
   );
