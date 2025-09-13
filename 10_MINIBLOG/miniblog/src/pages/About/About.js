@@ -10,7 +10,7 @@ const About = () => {
         Sobre o Mini <span>Blog</span>
       </h2>
       <p>
-        Esse porjeto consiste em um blog feito com React no front-end e Firebase
+        Esse projeto consiste em um blog feito com React no front-end e Firebase
         no back-end
       </p>
       <p>Clique no botão abaixo para criar seu post!</p>
